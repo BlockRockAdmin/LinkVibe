@@ -1,7 +1,7 @@
 // Inizializza il client Supabase
 const supabase = Supabase.createClient(
-  'https://uplnnaiubixhjjhqzpxw.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVwbG5uYWl1Yml4aGpqaHF6cHh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU3NDU2MTUsImV4cCI6MjA2MTMyMTYxNX0.m6jrFgKHO9uDVbJnH0PjWVacgRaAYSb0SUIcwlGrJEQ'
+  window.SUPABASE_CONFIG.SUPABASE_URL,
+  window.SUPABASE_CONFIG.SUPABASE_KEY
 );
 
 // Funzione per caricare i link
