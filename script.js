@@ -1,24 +1,12 @@
-// Verifica che Supabase sia definito
-if (typeof Supabase === 'undefined') {
-  console.error('Errore: Supabase non è definito. Assicurati che supabase.min.js sia caricato correttamente.');
-  throw new Error('Supabase non è definito');
-}
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.49.4';
 
-// Verifica che window.SUPABASE_CONFIG sia definito
-if (typeof window.SUPABASE_CONFIG === 'undefined') {
-  console.error('Errore: window.SUPABASE_CONFIG non è definito. Controlla config.js.');
-  throw new Error('window.SUPABASE_CONFIG non è definito');
-}
-
-// Inizializza il client Supabase
-const supabase = Supabase.createClient(
-  window.SUPABASE_CONFIG.SUPABASE_URL,
-  window.SUPABASE_CONFIG.SUPABASE_KEY
+const supabase = createClient(
+  'https://uplnnaiubixhjjhqzpxw.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVwbG5uYWl1Yml4aGpqaHF6cHh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA3NDU2MTUsImV4cCI6MjA2MTMyMTYxNX0.m6jrFgKHO9uDVbJnH0PjWVacgRaAYSb0SUIcwlGrJEQ'
 );
 
 console.log('Supabase client inizializzato:', supabase);
 
-// Funzione per caricare i link
 async function loadLinks() {
   try {
     const { data, error } = await supabase
@@ -52,5 +40,4 @@ async function loadLinks() {
   }
 }
 
-// Carica i link quando la pagina si carica
 loadLinks();
