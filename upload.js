@@ -67,6 +67,7 @@ async function getIndexedDBData() {
 }
 
 // Funzione per caricare i dati su Supabase
+
 async function uploadIndexedDBToSupabase() {
   try {
     const dbData = await getIndexedDBData();
@@ -75,20 +76,33 @@ async function uploadIndexedDBToSupabase() {
       return;
     }
 
+    // Trasforma i dati nel formato atteso dalla tabella indexeddb_data
+    const transformedData = dbData.map(item => ({
+      data: item // Inserisci l'intero oggetto come valore del campo "data"
+    }));
+
+    // Usa le credenziali da window.SUPABASE_CONFIG
+    if (typeof window.SUPABASE_CONFIG === 'undefined') {
+      console.error('Errore: window.SUPABASE_CONFIG non è definito. Controlla config.js.');
+      throw new Error('window.SUPABASE_CONFIG non è definito');
+    }
+
     const chunkSize = 100;
-    for (let i = 0; i < dbData.length; i += chunkSize) {
-      const chunk = dbData.slice(i, i + chunkSize);
-      const response = await fetch('https://uplnnaiubixhjjhqzpxw.supabase.co/functions/v1/clever-task', {
+    for (let i = 0; i < transformedData.length; i += chunkSize) {
+      const chunk = transformedData.slice(i, i + chunkSize);
+      console.log('Invio chunk:', chunk);
+      const response = await fetch(`${window.SUPABASE_CONFIG.SUPABASE_URL}/functions/v1/clever-task`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVwbG5uYWl1Yml4aGpqaHF6cHh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA3NDU2MTUsImV4cCI6MjA2MTMyMTYxNX0.m6jrFgKHO9uDVbJnH0PjWVacgRaAYSb0SUIcwlGrJEQ`,
+          'Authorization': `Bearer ${window.SUPABASE_CONFIG.SUPABASE_KEY}`,
         },
         body: JSON.stringify(chunk),
       });
 
       if (!response.ok) {
-        throw new Error('Errore durante l\'upload:', response.statusText);
+        const errorText = await response.text();
+        throw new Error(`Errore durante l'upload: ${response.status} - ${errorText}`);
       }
 
       console.log(`Chunk ${i / chunkSize + 1} caricato con successo`);
