@@ -18,9 +18,10 @@ body {
 .profile-pic {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
-  margin: 20px auto;
-  display: block;
+  border-radius: 50%; /* Rende l'immagine circolare */
+  object-fit: cover; /* Assicura che l'immagine si adatti bene */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aggiunge un'ombra */
+  margin-bottom: 20px;
 }
 
 h1 {
