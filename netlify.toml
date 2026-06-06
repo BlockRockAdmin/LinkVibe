@@ -1,0 +1,3 @@
+[build]
+  command   = "envsubst < config.js.template > config.js"
+  publish   = "."
