@@ -31,7 +31,7 @@ async function loadLinks() {
       linkElement.href = link.url;
       linkElement.className = 'link-button';
       linkElement.target = '_blank';
-      linkElement.innerHTML = `<i class="fab fa-${link.icon}"></i> ${link.title}`;
+      linkElement.innerHTML = `<i class="${link.icon}"></i> ${link.title}`;
       linksContainer.appendChild(linkElement);
     });
   } catch (err) {
