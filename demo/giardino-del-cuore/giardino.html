@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Il Giardino del Cuore · Comunità alloggio per anziani a Campagnano di Roma</title>
+<meta name="description" content="Comunità alloggio per anziani a Campagnano di Roma, Roma nord. Villa su un piano con giardino e piscina, assistenza H24, OSS, infermiera ed educatore. Soggiorni brevi e lunghi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Il Giardino del Cuore – Comunità alloggio per anziani",
+  "telephone": "+39 393 4816677",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada della Bossetta 5",
+    "addressLocality": "Campagnano di Roma",
+    "postalCode": "00063",
+    "addressRegion": "RM",
+    "addressCountry": "IT"
+  },
+  "areaServed": ["Campagnano di Roma", "Formello", "Sacrofano", "Magliano Romano", "Mazzano Romano", "Castelnuovo di Porto", "Morlupo", "Nepi", "Roma nord"],
+  "openingHours": "Mo-Su 00:00-23:59"
+}
+</script>
+<style>
+  :root{
+    --crema:#faf6ef; --carta:#ffffff; --verde:#4f6b3a; --verde-scuro:#34482a;
+    --rosa:#c9787f; --rosa-chiaro:#f4e3e2; --testo:#2f2a25; --grigio:#6b625a; --linea:#e7dfd3;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--crema);color:var(--testo);font:400 18px/1.65 Lato,system-ui,sans-serif}
+  img{max-width:100%;display:block}
+  a{color:var(--verde-scuro)}
+  h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.15;margin:0 0 .5em;color:var(--verde-scuro)}
+  h1{font-size:clamp(2.4rem,5.5vw,4rem)}
+  h2{font-size:clamp(2rem,4vw,2.8rem)}
+  h3{font-size:1.6rem}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:54px;padding:0 28px;border-radius:999px;font-weight:700;font-size:1.05rem;text-decoration:none;border:2px solid transparent;cursor:pointer}
+  .btn-pieno{background:var(--verde);color:#fff}
+  .btn-pieno:hover{background:var(--verde-scuro)}
+  .btn-vuoto{background:rgba(255,255,255,.92);color:var(--verde-scuro);border-color:#fff}
+  .btn-rosa{background:var(--rosa);color:#fff}
+
+  /* testata */
+  header{position:sticky;top:0;z-index:20;background:rgba(250,246,239,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--linea)}
+  .testata{display:flex;align-items:center;justify-content:space-between;gap:16px;height:84px}
+  .marchio{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .marchio img{height:66px;width:auto}
+  nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+  nav a{text-decoration:none;color:var(--testo);font-weight:700}
+  nav a:hover{color:var(--rosa)}
+  .tel-alto{font-weight:700;text-decoration:none;white-space:nowrap}
+  @media (max-width:900px){nav{display:none}}
+
+  /* apertura */
+  .apertura{position:relative;min-height:min(88vh,760px);display:flex;align-items:flex-end;color:#fff}
+  .apertura>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .apertura::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(25,30,20,.35) 40%,rgba(25,30,20,.8))}
+  .apertura .wrap{position:relative;z-index:1;padding-bottom:64px;width:100%}
+  .apertura h1{color:#fff;max-width:14em}
+  .apertura p{font-size:1.25rem;max-width:34em;margin:0 0 28px}
+  .azioni{display:flex;flex-wrap:wrap;gap:14px}
+
+  /* punti */
+  .punti{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--carta);border-bottom:1px solid var(--linea)}
+  .punto{padding:28px 22px;text-align:center;border-right:1px solid var(--linea)}
+  .punto:last-child{border-right:0}
+  .punto b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:var(--verde-scuro)}
+  .punto span{color:var(--grigio);font-size:1rem}
+  @media (max-width:800px){.punti{grid-template-columns:1fr 1fr}.punto:nth-child(2){border-right:0}.punto{border-bottom:1px solid var(--linea)}}
+
+  section{padding:96px 0}
+  .occhiello{display:block;font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rosa);font-weight:700;margin-bottom:10px}
+  .due{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+  .due img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;width:100%}
+  @media (max-width:860px){.due{grid-template-columns:1fr;gap:32px}.due img{aspect-ratio:4/3}}
+  .citazione{border-left:4px solid var(--rosa);padding:6px 0 6px 20px;font-family:"Cormorant Garamond",serif;font-size:1.6rem;color:var(--verde-scuro);margin:28px 0}
+
+  /* servizi */
+  .servizi{background:var(--carta)}
+  .griglia{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+  .scheda{background:var(--crema);border:1px solid var(--linea);border-radius:18px;padding:30px}
+  .scheda .icona{width:52px;height:52px;border-radius:50%;background:var(--rosa-chiaro);display:grid;place-items:center;margin-bottom:16px}
+  .scheda .icona svg{width:26px;height:26px;stroke:var(--rosa);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .scheda p{margin:0;color:var(--grigio)}
+  @media (max-width:900px){.griglia{grid-template-columns:1fr 1fr}}
+  @media (max-width:600px){.griglia{grid-template-columns:1fr}}
+
+  /* galleria */
+  .schede-galleria{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}
+  .schede-galleria button{min-height:48px;padding:0 22px;border-radius:999px;border:2px solid var(--verde);background:transparent;color:var(--verde-scuro);font:700 1rem Lato,sans-serif;cursor:pointer}
+  .schede-galleria button[aria-pressed="true"]{background:var(--verde);color:#fff}
+  .foto{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .foto figure{margin:0;cursor:zoom-in}
+  .foto .box{overflow:hidden;border-radius:14px;position:relative}
+  .foto img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .4s ease}
+  .foto figure:hover img{transform:scale(1.04)}
+  .foto .box::after{content:"⤢";position:absolute;right:10px;bottom:10px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.9);color:var(--verde-scuro);display:grid;place-items:center;font-size:1.1rem}
+  .foto figcaption{font-size:.95rem;color:var(--grigio);padding:6px 2px 0}
+  .foto figure.via{display:none}
+  @media (max-width:700px){.foto{grid-template-columns:1fr 1fr}}
+
+  /* foto ingrandita sfogliabile */
+  .lb{border:0;padding:0;background:transparent;width:100vw;height:100vh;max-width:none;max-height:none;margin:0}
+  .lb::backdrop{background:rgba(20,22,16,.93)}
+  .lb[open]{display:flex;align-items:center;justify-content:center}
+  .lb figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:12px}
+  .lb img{max-width:min(92vw,1100px);max-height:76vh;border-radius:12px;object-fit:contain}
+  .lb figcaption{color:#fff;font-family:"Cormorant Garamond",serif;font-size:1.5rem}
+  .lb button{position:fixed;width:60px;height:60px;border-radius:50%;border:0;background:#fff;color:var(--verde-scuro);font-size:1.6rem;cursor:pointer}
+  .lb .x{top:16px;right:16px}
+  .lb .p{left:16px;top:calc(50% - 30px)}.lb .n{right:16px;top:calc(50% - 30px)}
+  .lb .c{position:fixed;top:30px;left:50%;transform:translateX(-50%);color:#fff;font-weight:700}
+  .miniature{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:8px;max-width:92vw;overflow-x:auto;scrollbar-width:none;padding:4px}
+  .miniature img{width:56px;height:56px;object-fit:cover;border-radius:8px;opacity:.5;cursor:pointer;border:2px solid transparent;max-height:none}
+  .miniature img[aria-current="true"]{opacity:1;border-color:#fff}
+  @media (max-width:700px){.lb .p,.lb .n{top:auto;bottom:96px}.lb .p{left:calc(50% - 76px)}.lb .n{right:calc(50% - 76px)}.lb img{max-height:62vh}}
+
+  /* giornata */
+  .giornata{background:var(--verde-scuro);color:#f3efe6}
+  .giornata h2,.giornata h3{color:#fff}
+  .orari{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:36px}
+  .orari div{border-top:2px solid var(--rosa);padding-top:16px}
+  .orari b{display:block;color:#fff;font-size:1.1rem}
+  @media (max-width:800px){.orari{grid-template-columns:1fr 1fr}}
+
+  /* testimonianze */
+  .voci{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+  .voce{background:var(--carta);border-radius:18px;padding:30px;border:1px dashed var(--rosa)}
+  .voce p{font-family:"Cormorant Garamond",serif;font-size:1.4rem;margin:0 0 10px}
+  .voce small{color:var(--grigio)}
+  @media (max-width:760px){.voci{grid-template-columns:1fr}}
+
+  /* contatti */
+  .contatti{background:var(--carta)}
+  form{display:grid;gap:16px}
+  label{font-weight:700;display:grid;gap:6px}
+  input,select,textarea{font:inherit;padding:14px 16px;border:2px solid var(--linea);border-radius:12px;background:var(--crema);color:var(--testo);min-height:54px}
+  input:focus,select:focus,textarea:focus{outline:3px solid var(--rosa-chiaro);border-color:var(--rosa)}
+  .info p{margin:0 0 14px}
+  .mappa{border:0;width:100%;height:280px;border-radius:18px;margin-top:10px}
+
+  footer{background:#25301e;color:#d9d3c7;padding:48px 0 110px;font-size:.95rem}
+  footer a{color:#fff}
+  .piede{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+
+  /* barra chiamata su telefono */
+  .barra{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--carta);box-shadow:0 -4px 18px rgba(0,0,0,.12)}
+  .barra .btn{flex:1;min-height:56px;padding:0 10px}
+  @media (max-width:760px){.barra{display:flex}.tel-alto{display:none}}
+
+  .demo{position:fixed;bottom:96px;right:12px;opacity:.85;z-index:40;background:var(--rosa);color:#fff;font-size:.8rem;font-weight:700;padding:6px 12px;border-radius:999px}
+</style>
+</head>
+<body>
+<div class="demo">DEMO 1 · Giardino</div>
+
+<header>
+  <div class="wrap testata">
+    <a class="marchio" href="#"><img src="img/logo.png" alt="Il Giardino del Cuore, comunità alloggio per anziani"></a>
+    <nav aria-label="Menu principale">
+      <ul>
+        <li><a href="#chi-siamo">Chi siamo</a></li>
+        <li><a href="#servizi">Servizi</a></li>
+        <li><a href="#la-casa">La casa</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-pieno tel-alto" href="tel:+393934816677">📞 393 481 6677</a>
+  </div>
+</header>
+
+<main>
+  <section class="apertura" style="padding:0">
+    <img src="img/piscina.jpg" alt="Piscina e pergolato nel giardino della comunità alloggio a Campagnano di Roma">
+    <div class="wrap">
+      <h1>Un posto sicuro per i tuoi cari, nel verde di Campagnano</h1>
+      <p>Comunità alloggio per anziani in una villa su un piano. Assistenza H24, un grande giardino e un'atmosfera di famiglia.</p>
+      <div class="azioni">
+        <a class="btn btn-pieno" href="#contatti">Prenota una visita</a>
+        <a class="btn btn-vuoto" href="tel:+393934816677">Chiama ora</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="punti">
+    <div class="punto"><b>H24</b><span>assistenza giorno e notte</span></div>
+    <div class="punto"><b>Piano unico</b><span>nessuna scala da fare</span></div>
+    <div class="punto"><b>Giardino</b><span>e piscina per gli ospiti</span></div>
+    <div class="punto"><b>Breve o lungo</b><span>soggiorni su misura</span></div>
+  </div>
+
+  <section id="chi-siamo">
+    <div class="wrap due">
+      <div>
+        <span class="occhiello">Chi siamo</span>
+        <h2>Una casa, non una struttura</h2>
+        <p>Il Giardino del Cuore è una comunità alloggio per anziani a Campagnano di Roma, a nord di Roma. Accogliamo pochi ospiti alla volta. Così conosciamo ognuno per nome, abitudini e gusti.</p>
+        <p>Organizziamo la giornata intorno alla persona. Ogni ospite ha un progetto personalizzato per il suo benessere fisico e mentale.</p>
+        <div class="citazione">«Accogliere e considerare gli ospiti unici. Senza più solitudine, come in famiglia.»</div>
+        <a class="btn btn-pieno" href="#contatti">Vieni a conoscerci</a>
+      </div>
+      <img src="img/soggiorno-pranzo.jpg" alt="Soggiorno luminoso con divano rosso e tavolo da pranzo" loading="lazy">
+    </div>
+  </section>
+
+  <section class="servizi" id="servizi">
+    <div class="wrap">
+      <span class="occhiello">Servizi</span>
+      <h2>Cosa offriamo ogni giorno</h2>
+      <div class="griglia">
+        <div class="scheda">
+          <div class="icona"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3>Assistenza H24</h3>
+          <p>Personale presente giorno e notte, tutti i giorni dell'anno.</p>
+        </div>
+        <div class="scheda">
+          <div class="icona"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></div>
+          <h3>Personale qualificato</h3>
+          <p>OSS, infermiera ed educatore professionale. Operatrici empatiche e solari.</p>
+        </div>
+        <div class="scheda">
+          <div class="icona"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V10l6-5 6 5v10"/><path d="M10 20v-5h4v5"/></svg></div>
+          <h3>Camere luminose</h3>
+          <p>Camere doppie grandi, con vista sul giardino. Quattro bagni per gli ospiti.</p>
+        </div>
+        <div class="scheda">
+          <div class="icona"><svg viewBox="0 0 24 24"><path d="M5 11h14M7 11V7a5 5 0 0 1 10 0v4M6 11l1 9h10l1-9"/></svg></div>
+          <h3>Cucina varia</h3>
+          <p>Un menù che cambia per soddisfare anche i palati più esigenti.</p>
+        </div>
+        <div class="scheda">
+          <div class="icona"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M11 20c0-3 2.5-5 5-5s5 2 5 5"/></svg></div>
+          <h3>Attività insieme</h3>
+          <p>Attività giornaliere a rotazione, gite e uscite sul territorio.</p>
+        </div>
+        <div class="scheda">
+          <div class="icona"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></div>
+          <h3>Soggiorni flessibili</h3>
+          <p>Soggiorni brevi, anche di sollievo per le famiglie, oppure a lungo termine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="la-casa">
+    <div class="wrap">
+      <span class="occhiello">La casa</span>
+      <h2>Guarda dove vivrai</h2>
+      <p style="max-width:40em">Una villa su un piano unico, immersa nel verde. Tocca una foto per ingrandirla.</p>
+      <div class="schede-galleria" role="group" aria-label="Filtra le foto">
+        <button aria-pressed="true" data-f="tutte">Tutte</button>
+        <button aria-pressed="false" data-f="esterni">Giardino</button>
+        <button aria-pressed="false" data-f="comuni">Spazi comuni</button>
+        <button aria-pressed="false" data-f="camere">Camere</button>
+        <button aria-pressed="false" data-f="bagni">Bagni</button>
+      </div>
+      <div class="foto" id="foto">
+        <figure data-c="esterni"><img src="img/villa.jpg" alt="La villa su un piano vista dal prato" loading="lazy"><figcaption>La villa</figcaption></figure>
+        <figure data-c="esterni"><img src="img/prato-piscina.jpg" alt="Prato e piscina" loading="lazy"><figcaption>Il prato e la piscina</figcaption></figure>
+        <figure data-c="comuni"><img src="img/pranzo-camino.jpg" alt="Sala da pranzo con camino" loading="lazy"><figcaption>La sala con il camino</figcaption></figure>
+        <figure data-c="comuni"><img src="img/soggiorno.jpg" alt="Soggiorno con divano rosso" loading="lazy"><figcaption>Il soggiorno</figcaption></figure>
+        <figure data-c="comuni"><img src="img/tavolo-finestra.jpg" alt="Tavolo da pranzo vicino alla finestra" loading="lazy"><figcaption>Il tavolo da pranzo</figcaption></figure>
+        <figure data-c="camere"><img src="img/camera-verde.jpg" alt="Camera con letto verde e vista sul giardino" loading="lazy"><figcaption>Camera verde</figcaption></figure>
+        <figure data-c="camere"><img src="img/camera-rosa.jpg" alt="Camera doppia con copriletti rosa" loading="lazy"><figcaption>Camera rosa</figcaption></figure>
+        <figure data-c="camere"><img src="img/camera-blu-2.jpg" alt="Camera doppia con copriletti blu" loading="lazy"><figcaption>Camera blu</figcaption></figure>
+        <figure data-c="camere"><img src="img/camera-beige.jpg" alt="Camera doppia luminosa" loading="lazy"><figcaption>Camera doppia</figcaption></figure>
+        <figure data-c="camere"><img src="img/camera-verde-2.jpg" alt="Camera doppia con letti verdi" loading="lazy"><figcaption>Camera doppia verde</figcaption></figure>
+        <figure data-c="bagni"><img src="img/bagno-verde.jpg" alt="Bagno con piastrelle verdi" loading="lazy"><figcaption>Bagno</figcaption></figure>
+        <figure data-c="bagni"><img src="img/bagno-arancio.jpg" alt="Bagno con piastrelle arancioni" loading="lazy"><figcaption>Bagno</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="giornata">
+    <div class="wrap">
+      <span class="occhiello">La giornata</span>
+      <h2>Ritmi tranquilli, sempre in compagnia</h2>
+      <p style="max-width:40em">Un esempio di giornata. Gli orari si adattano a ogni ospite.</p>
+      <div class="orari">
+        <div><b>Mattina</b>Risveglio con calma, colazione e cura della persona.</div>
+        <div><b>Mezzogiorno</b>Pranzo insieme, con il menù del giorno.</div>
+        <div><b>Pomeriggio</b>Attività, passeggiata in giardino o un'uscita.</div>
+        <div><b>Sera</b>Cena, due chiacchiere e riposo. Il personale resta tutta la notte.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="occhiello">Dicono di noi</span>
+      <h2>Le parole delle famiglie</h2>
+      <div class="voci">
+        <div class="voce"><p>«Qui va la frase vera di un familiare.»</p><small>DA RACCOGLIERE · nome e iniziale, con consenso</small></div>
+        <div class="voce"><p>«Qui va una seconda testimonianza vera.»</p><small>DA RACCOGLIERE · oppure le recensioni di Google</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contatti" id="contatti">
+    <div class="wrap due" style="align-items:start">
+      <div>
+        <span class="occhiello">Contatti</span>
+        <h2>Prenota una visita</h2>
+        <p>Lascia nome e telefono. Ti richiamiamo noi. Il messaggio parte su WhatsApp.</p>
+        <form id="modulo">
+          <label>Nome<input name="nome" required autocomplete="name"></label>
+          <label>Telefono<input name="tel" type="tel" required autocomplete="tel"></label>
+          <label>Per chi cerchi
+            <select name="per"><option>Un genitore</option><option>Un parente</option><option>Per me</option><option>Altro</option></select>
+          </label>
+          <label>Messaggio (facoltativo)<textarea name="msg" rows="3"></textarea></label>
+          <button class="btn btn-rosa" type="submit">Invia la richiesta</button>
+        </form>
+      </div>
+      <div class="info">
+        <h3>Dove siamo</h3>
+        <p>Strada della Bossetta 5<br>00063 Campagnano di Roma (RM)</p>
+        <p><a href="tel:+393934816677"><b>393 481 6677</b></a><br>Rispondiamo tutti i giorni.</p>
+        <p>Siamo vicini a Formello, Sacrofano, Magliano Romano, Mazzano Romano, Castelnuovo di Porto, Morlupo e Nepi. Facile da raggiungere da Roma nord e dalla Cassia.</p>
+        <iframe class="mappa" title="Mappa: Strada della Bossetta 5, Campagnano di Roma" loading="lazy" src="https://www.google.com/maps?q=Strada+della+Bossetta+5,+Campagnano+di+Roma&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap piede">
+    <div><b>Il Giardino del Cuore</b> · Comunità alloggio per anziani<br>Strada della Bossetta 5, Campagnano di Roma · 393 481 6677</div>
+    <div>Ragione sociale · P.IVA [da inserire]<br><a href="#">Privacy</a> · <a href="#">Cookie</a></div>
+  </div>
+</footer>
+
+<div class="barra">
+  <a class="btn btn-pieno" href="tel:+393934816677">📞 Chiama</a>
+  <a class="btn btn-rosa" href="https://wa.me/393934816677">WhatsApp</a>
+</div>
+
+<dialog class="lb" id="lb" aria-label="Foto ingrandita">
+  <span class="c"></span>
+  <button class="x" aria-label="Chiudi">✕</button>
+  <button class="p" aria-label="Foto precedente">←</button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button class="n" aria-label="Foto successiva">→</button>
+  <div class="miniature" id="miniature"></div>
+</dialog>
+
+<script>
+  const bottoni=document.querySelectorAll('.schede-galleria button');
+  bottoni.forEach(b=>b.addEventListener('click',()=>{
+    bottoni.forEach(x=>x.setAttribute('aria-pressed',x===b));
+    document.querySelectorAll('#foto figure').forEach(f=>{
+      f.classList.toggle('via',!(b.dataset.f==='tutte'||f.dataset.c===b.dataset.f));
+    });
+  }));
+
+  // foto ingrandita: sfoglia solo le foto del filtro attivo
+  const figure=[...document.querySelectorAll('#foto figure')];
+  figure.forEach(f=>{const i=f.querySelector('img');const b=document.createElement('div');b.className='box';i.before(b);b.appendChild(i)});
+  const lb=document.getElementById('lb'), lbImg=lb.querySelector('figure img'), lbCap=lb.querySelector('figcaption'), lbC=lb.querySelector('.c'), mini=document.getElementById('miniature');
+  let lista=[], pos=0;
+  function mostra(i){
+    pos=(i+lista.length)%lista.length;
+    const im=lista[pos].querySelector('img');
+    lbImg.src=im.src; lbImg.alt=im.alt;
+    lbCap.textContent=lista[pos].querySelector('figcaption').textContent;
+    lbC.textContent=(pos+1)+' / '+lista.length;
+    [...mini.children].forEach((m,k)=>{m.setAttribute('aria-current',k===pos);if(k===pos)m.scrollIntoView({block:'nearest',inline:'center'})});
+  }
+  function apri(f){
+    lista=figure.filter(x=>!x.classList.contains('via'));
+    mini.innerHTML='';
+    lista.forEach((x,k)=>{const m=document.createElement('img');m.src=x.querySelector('img').src;m.alt='';m.onclick=()=>mostra(k);mini.appendChild(m)});
+    lb.showModal(); mostra(lista.indexOf(f));
+  }
+  figure.forEach(f=>f.addEventListener('click',()=>apri(f)));
+  lb.querySelector('.x').onclick=()=>lb.close();
+  lb.querySelector('.p').onclick=()=>mostra(pos-1);
+  lb.querySelector('.n').onclick=()=>mostra(pos+1);
+  lb.addEventListener('click',e=>{if(e.target===lb)lb.close()});
+  lb.addEventListener('keydown',e=>{if(e.key==='ArrowRight')mostra(pos+1);if(e.key==='ArrowLeft')mostra(pos-1)});
+  let x0=null;
+  lb.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});
+  lb.addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>50)mostra(pos+(d<0?1:-1));x0=null});
+  document.getElementById('modulo').addEventListener('submit',e=>{
+    e.preventDefault();
+    const d=new FormData(e.target);
+    const t=`Buongiorno, sono ${d.get('nome')} (tel. ${d.get('tel')}). Vorrei prenotare una visita. Cerco per: ${d.get('per')}. ${d.get('msg')||''}`;
+    window.open('https://wa.me/393934816677?text='+encodeURIComponent(t),'_blank');
+  });
+</script>
+</body>
+</html>

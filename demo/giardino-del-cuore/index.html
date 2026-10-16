@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Giardino del Cuore · Demo</title>
+<style>
+  :root{--fondo:#14171a;--pannello:#1d2125;--linea:#2c3237;--testo:#e9ecef;--grigio:#9aa3ab;--verde:#7fb27a;--rosa:#e08a8f}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--fondo);color:var(--testo);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+  .wrap{max-width:1400px;margin:0 auto;padding:28px 20px 60px}
+  h1{font-size:clamp(1.8rem,4vw,2.8rem);margin:0 0 4px}
+  .sotto{color:var(--grigio);margin:0 0 24px}
+  .comandi{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+  .comandi button{min-height:44px;padding:0 18px;border-radius:10px;border:1px solid var(--linea);background:var(--pannello);color:var(--testo);font:600 15px system-ui;cursor:pointer}
+  .comandi button[aria-pressed="true"]{background:var(--testo);color:var(--fondo)}
+  .griglia{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media (max-width:980px){.griglia{grid-template-columns:1fr}}
+  .scheda{background:var(--pannello);border:1px solid var(--linea);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+  .testa{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid var(--linea)}
+  .testa h2{margin:0;font-size:1.2rem}
+  .testa small{display:block;color:var(--grigio);font-weight:400}
+  .punto{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px}
+  .apri{min-height:40px;display:inline-flex;align-items:center;padding:0 16px;border-radius:10px;background:var(--testo);color:var(--fondo);font-weight:700;text-decoration:none;white-space:nowrap}
+  .vista{position:relative;background:#0c0e10;display:flex;justify-content:center;align-items:flex-start;overflow:hidden}
+  /* vista PC: iframe a 1366 px ridotto in scala */
+  .vista.pc{height:620px}
+  .vista.pc iframe{width:1366px;height:1600px;border:0;transform-origin:top left;position:absolute;left:0;top:0;background:#fff}
+  /* vista telefono */
+  .vista.tel{height:760px;padding:24px 0}
+  .vista.tel .cornice{width:390px;height:712px;border-radius:36px;border:10px solid #000;overflow:hidden;box-shadow:0 0 0 1px #333}
+  .vista.tel iframe{width:100%;height:100%;border:0;background:#fff}
+  .note{padding:16px 18px;color:var(--grigio);font-size:.95rem;border-top:1px solid var(--linea)}
+  .note b{color:var(--testo)}
+  .scelta{display:flex;gap:10px;align-items:center;padding:0 18px 18px}
+  .scelta label{display:flex;gap:8px;align-items:center;cursor:pointer;font-weight:600}
+  .scelta input{width:20px;height:20px;accent-color:var(--verde)}
+  .blocco{margin-top:28px;background:var(--pannello);border:1px solid var(--linea);border-radius:16px;padding:20px 22px}
+  .blocco h3{margin:0 0 10px}
+  .blocco ul{margin:0;padding-left:0;list-style:none;columns:2;column-gap:32px}
+  @media (max-width:700px){.blocco ul{columns:1}}
+  .blocco li{break-inside:avoid;padding:4px 0}
+  .blocco li label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+  .blocco li input{margin-top:4px;width:18px;height:18px;accent-color:var(--verde);flex:none}
+  .blocco li input:checked+span{color:var(--grigio);text-decoration:line-through}
+  textarea{width:100%;min-height:110px;margin-top:6px;background:var(--fondo);color:var(--testo);border:1px solid var(--linea);border-radius:10px;padding:12px;font:inherit}
+  code{background:var(--fondo);padding:2px 6px;border-radius:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Il Giardino del Cuore</h1>
+  <p class="sotto">Pagina di controllo delle demo · proposta per il sito · non ancora pubblico</p>
+
+  <div class="comandi" role="group" aria-label="Vista">
+    <button data-v="pc" aria-pressed="true">🖥️ Vista PC</button>
+    <button data-v="tel" aria-pressed="false">📱 Vista telefono</button>
+    <button id="ricarica">↻ Ricarica le demo</button>
+  </div>
+
+  <div class="griglia">
+    <article class="scheda">
+      <div class="testa">
+        <h2><span class="punto" style="background:var(--rosa)"></span>Demo 1 · Giardino<small>Elegante · crema, verde e rosa · piscina in apertura</small></h2>
+        <a class="apri" href="giardino.html" target="_blank">Apri ↗</a>
+      </div>
+      <div class="vista pc" data-src="giardino.html"></div>
+      <div class="note"><b>Punti forti:</b> galleria con filtri e zoom, sezione «La giornata», tono caldo.</div>
+      <div class="scelta"><label><input type="radio" name="scelta" value="giardino"> Scelgo questa</label></div>
+    </article>
+
+    <article class="scheda">
+      <div class="testa">
+        <h2><span class="punto" style="background:var(--verde)"></span>Demo 2 · Casa<small>Moderna · salvia e corallo · mosaico di foto</small></h2>
+        <a class="apri" href="casa.html" target="_blank">Apri ↗</a>
+      </div>
+      <div class="vista pc" data-src="casa.html"></div>
+      <div class="note"><b>Punti forti:</b> «Come funziona» in 3 passi, domande frequenti, camere che scorrono.</div>
+      <div class="scelta"><label><input type="radio" name="scelta" value="casa"> Scelgo questa</label></div>
+    </article>
+  </div>
+
+  <section class="blocco">
+    <h3>Da completare prima di andare online</h3>
+    <ul id="lista">
+      <li><label><input type="checkbox" data-k="posti"><span>Numero di posti</span></label></li>
+      <li><label><input type="checkbox" data-k="retta"><span>Retta indicativa e cosa comprende</span></label></li>
+      <li><label><input type="checkbox" data-k="visite"><span>Orari delle visite per i familiari</span></label></li>
+      <li><label><input type="checkbox" data-k="nonauto"><span>Accolgono non autosufficienti? (secondo l'autorizzazione)</span></label></li>
+      <li><label><input type="checkbox" data-k="piva"><span>Ragione sociale e P.IVA</span></label></li>
+      <li><label><input type="checkbox" data-k="aut"><span>Estremi dell'autorizzazione regionale</span></label></li>
+      <li><label><input type="checkbox" data-k="email"><span>Email</span></label></li>
+      <li><label><input type="checkbox" data-k="wa"><span>WhatsApp sullo stesso numero 393 4816677?</span></label></li>
+      <li><label><input type="checkbox" data-k="test"><span>Due testimonianze vere, con consenso</span></label></li>
+      <li><label><input type="checkbox" data-k="logo"><span>Logo in alta risoluzione</span></label></li>
+      <li><label><input type="checkbox" data-k="dominio"><span>Dominio (es. ilgiardinodelcuore.it)</span></label></li>
+      <li><label><input type="checkbox" data-k="privacy"><span>Pagine Privacy e Cookie</span></label></li>
+      <li><label><input type="checkbox" data-k="gbp"><span>Scheda Google Business</span></label></li>
+    </ul>
+  </section>
+
+  <section class="blocco">
+    <h3>Note</h3>
+    <textarea id="note" placeholder="Cosa ha detto il Secco, modifiche da fare..."></textarea>
+    <p class="sotto" style="margin:8px 0 0;font-size:.9rem">Scelta, spunte e note restano salvate solo nel browser di chi le scrive.</p>
+  </section>
+</div>
+
+<script>
+  // memoria locale: se il browser la blocca, la pagina funziona lo stesso
+  const leggi=k=>{try{return localStorage.getItem('gdc_'+k)}catch(e){return null}};
+  const scrivi=(k,v)=>{try{localStorage.setItem('gdc_'+k,v)}catch(e){}};
+
+  let vista=leggi('vista')||'pc';
+  const viste=[...document.querySelectorAll('.vista')];
+
+  function disegna(){
+    viste.forEach(v=>{
+      v.className='vista '+vista;
+      v.innerHTML='';
+      const f=document.createElement('iframe');
+      f.src=v.dataset.src+'?t='+Date.now();
+      f.title=v.dataset.src;
+      if(vista==='tel'){const c=document.createElement('div');c.className='cornice';c.appendChild(f);v.appendChild(c)}
+      else v.appendChild(f);
+    });
+    scala();
+    document.querySelectorAll('[data-v]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===vista));
+  }
+  function scala(){
+    if(vista!=='pc')return;
+    viste.forEach(v=>{
+      const f=v.querySelector('iframe'); const s=v.clientWidth/1366;
+      f.style.transform=`scale(${s})`; v.style.height=Math.round(1600*s)+'px';
+    });
+  }
+  document.querySelectorAll('[data-v]').forEach(b=>b.addEventListener('click',()=>{vista=b.dataset.v;scrivi('vista',vista);disegna()}));
+  document.getElementById('ricarica').addEventListener('click',disegna);
+  addEventListener('resize',scala);
+  disegna();
+
+  // scelta
+  const sc=leggi('scelta');
+  document.querySelectorAll('input[name=scelta]').forEach(r=>{
+    if(r.value===sc)r.checked=true;
+    r.addEventListener('change',()=>scrivi('scelta',r.value));
+  });
+  // spunte
+  document.querySelectorAll('#lista input').forEach(c=>{
+    c.checked=leggi('k_'+c.dataset.k)==='1';
+    c.addEventListener('change',()=>scrivi('k_'+c.dataset.k,c.checked?'1':'0'));
+  });
+  // note
+  const n=document.getElementById('note');
+  n.value=leggi('note')||'';
+  n.addEventListener('input',()=>scrivi('note',n.value));
+</script>
+</body>
+</html>
