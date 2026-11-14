@@ -2,19 +2,51 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Developer | Alessandro Lupi</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Alessandro Lupi · LinkVibe</title>
+  <meta name="description" content="Tutti i profili e i progetti di Alessandro Lupi, multi-stack developer.">
+  <meta name="theme-color" content="#07080d">
+  <meta property="og:title" content="Alessandro Lupi · LinkVibe">
+  <meta property="og:description" content="Tutti i miei profili e progetti in un posto solo.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/4179048?v=4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
-  <div class="container">
-        <img src="https://avatars.githubusercontent.com/u/4179048?v=4" alt="Profile Picture" class="profile-pic">
-    <h1>Multi-Stack Developer | Alessandro Lupi</h1>
-        <p class="intro-description">Appassionato di programmazione, creazione e innovazione. Studio Ingegneria Informatica (7% completato) e vivo tra tecnologia e smartphone. Tutti i miei profili su LinkVibe! 🚀</p>
-    <div id="links"></div>
+  <div class="bg" aria-hidden="true">
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+    <span class="grid"></span>
   </div>
+
+  <main class="container">
+    <header class="hero">
+      <div class="avatar-ring">
+        <img src="https://avatars.githubusercontent.com/u/4179048?v=4" alt="Alessandro Lupi" class="profile-pic" width="112" height="112">
+        <span class="status" title="Online"></span>
+      </div>
+      <p class="kicker"><span class="dot"></span> Multi-Stack Developer</p>
+      <h1>Alessandro <span class="grad">Lupi</span></h1>
+      <p class="intro-description">Programmazione, creazione e innovazione. Studio Ingegneria Informatica e vivo tra tecnologia e smartphone.</p>
+      <ul class="tags">
+        <li>Python</li><li>Rust</li><li>JavaScript</li><li>Trading&nbsp;bot</li><li>Self-hosting</li>
+      </ul>
+    </header>
+
+    <nav id="links" class="links" aria-label="I miei link">
+      <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+    </nav>
+
+    <footer class="foot">
+      <span>© <span id="year"></span> Alessandro Lupi</span>
+      <span class="sep">·</span>
+      <span>Fatto con <i class="fas fa-heart"></i> su LinkVibe</span>
+    </footer>
+  </main>
+
   <script src="config.js"></script>
   <script type="module" src="script.js"></script>
   <script defer src="upload.js"></script>
