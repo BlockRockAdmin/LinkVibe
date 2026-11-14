@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">BlockRock</title>
+  <desc id="desc">Una rete di scelte, un percorso verso la stabilità.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#080809"/><stop offset="1" stop-color="#181014"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#ff234d" stop-opacity=".18"/><stop offset="1" stop-color="#ff234d" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="360" rx="20" fill="url(#bg)"/>
+  <circle cx="914" cy="180" r="174" fill="url(#glow)"/>
+  <g fill="none" stroke-width="1.2">
+    <circle cx="914" cy="123" r="98" stroke="#ff355e" stroke-opacity=".76" fill="#ff355e" fill-opacity=".10"/>
+    <circle cx="970" cy="180" r="98" stroke="#59f5a8" stroke-opacity=".76" fill="#59f5a8" fill-opacity=".10"/>
+    <circle cx="914" cy="237" r="98" stroke="#29bd7b" stroke-opacity=".76" fill="#29bd7b" fill-opacity=".10"/>
+    <circle cx="858" cy="180" r="98" stroke="#cd1745" stroke-opacity=".76" fill="#cd1745" fill-opacity=".10"/>
+    <circle cx="914" cy="180" r="149" stroke="#a8c6c0" stroke-opacity=".32" stroke-dasharray="2 8"/>
+    <circle cx="914" cy="180" r="31" fill="#0d100f" stroke="#b2d8cc" stroke-opacity=".8"/>
+    <path d="M914 161v38m-19-19h38m-32-13 26 26m0-26-26 26" stroke="#d9eee7" stroke-opacity=".8"/>
+  </g>
+  <circle cx="914" cy="180" r="4" fill="#e2f3ed"/>
+  <text x="75" y="102" fill="#ff6c88" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="5">PERSONE · TECNOLOGIA · FIDUCIA</text>
+  <text x="70" y="190" fill="#f2f6f6" font-family="Arial,sans-serif" font-size="76" font-weight="700" letter-spacing="4">BLOCKROCK</text>
+  <text x="74" y="239" fill="#b6c8ce" font-family="Arial,sans-serif" font-size="24">Ogni scelta lascia una traccia.</text>
+  <text x="74" y="274" fill="#b6c8ce" font-family="Arial,sans-serif" font-size="24">Ogni percorso può trovare il suo equilibrio.</text>
+  <path d="M75 307h85" stroke="#50efa0" stroke-width="3"/>
+</svg>

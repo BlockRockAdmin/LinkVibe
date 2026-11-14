@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-label="ADAM">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b0f1a"/><stop offset="1" stop-color="#141026"/></linearGradient>
+    <radialGradient id="r" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#a78bfa" stop-opacity=".45"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></radialGradient>
+    <linearGradient id="t" x1="0" x2="1"><stop offset="0" stop-color="#5eead4"/><stop offset=".5" stop-color="#4ea1ff"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+  </defs>
+  <rect width="960" height="420" fill="url(#g)"/>
+  <circle cx="480" cy="210" r="260" fill="url(#r)"/>
+  <g stroke="#4ea1ff" stroke-opacity=".25" fill="none">
+    <circle cx="480" cy="210" r="120"/><circle cx="480" cy="210" r="170" stroke-dasharray="4 8"/>
+  </g>
+  <text x="480" y="236" text-anchor="middle" font-family="Space Grotesk, Arial, sans-serif" font-size="96" font-weight="700" letter-spacing="18" fill="url(#t)">ADAM</text>
+  <text x="480" y="290" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="6" fill="#9aa1b5">PROGETTO PRIVATO</text>
+</svg>
