@@ -1,14 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-label="ADAM">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-label="ADAM, progetto privato">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b0f1a"/><stop offset="1" stop-color="#141026"/></linearGradient>
-    <radialGradient id="r" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#a78bfa" stop-opacity=".45"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></radialGradient>
-    <linearGradient id="t" x1="0" x2="1"><stop offset="0" stop-color="#5eead4"/><stop offset=".5" stop-color="#4ea1ff"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#050507"/><stop offset=".78" stop-color="#0b0608"/><stop offset="1" stop-color="#2a0710"/></linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d4141f"/><stop offset="1" stop-color="#7a0a12"/></linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb347" stop-opacity=".95"/><stop offset="1" stop-color="#ff6a00" stop-opacity="0"/></linearGradient>
+    <radialGradient id="halo" cx="50%" cy="38%" r="45%"><stop offset="0" stop-color="#ff2a3a" stop-opacity=".35"/><stop offset="1" stop-color="#ff2a3a" stop-opacity="0"/></radialGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f2f7"/><stop offset="1" stop-color="#b9b4c6"/></linearGradient>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" opacity=".25"/></pattern>
   </defs>
-  <rect width="960" height="420" fill="url(#g)"/>
-  <circle cx="480" cy="210" r="260" fill="url(#r)"/>
-  <g stroke="#4ea1ff" stroke-opacity=".25" fill="none">
-    <circle cx="480" cy="210" r="120"/><circle cx="480" cy="210" r="170" stroke-dasharray="4 8"/>
+  <rect width="960" height="420" fill="url(#bg)"/>
+  <rect width="960" height="420" fill="url(#halo)"/>
+  <!-- croce a T -->
+  <rect x="300" y="70" width="360" height="54" fill="url(#red)"/>
+  <rect x="448" y="70" width="64" height="300" fill="url(#red)"/>
+  <!-- fascio di luce -->
+  <rect x="470" y="210" width="20" height="170" fill="url(#beam)"/>
+  <!-- sagoma geometrica astratta -->
+  <g fill="url(#body)">
+    <path d="M330 104 L455 96 L505 96 L630 104 L630 112 L505 116 L455 116 L330 112 Z"/>
+    <path d="M452 116 L508 116 L500 200 L480 214 L460 200 Z"/>
+    <circle cx="480" cy="80" r="17"/>
   </g>
-  <text x="480" y="236" text-anchor="middle" font-family="Space Grotesk, Arial, sans-serif" font-size="96" font-weight="700" letter-spacing="18" fill="url(#t)">ADAM</text>
-  <text x="480" y="290" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="6" fill="#9aa1b5">PROGETTO PRIVATO</text>
+  <circle cx="480" cy="80" r="7" fill="#5b1a3a"/>
+  <g stroke="#d9d4e4" stroke-width="2" stroke-linecap="round" opacity=".8">
+    <path d="M466 206 l-6 14 M474 212 l-3 15 M486 212 l3 15 M494 206 l6 14"/>
+  </g>
+  <!-- linea dell'orizzonte -->
+  <rect x="0" y="372" width="960" height="2" fill="#ff2a3a" opacity=".55"/>
+  <!-- testo -->
+  <text x="64" y="300" font-family="Space Grotesk, Arial, sans-serif" font-size="72" font-weight="700" letter-spacing="10" fill="#f4f2f7">ADAM</text>
+  <text x="66" y="334" font-family="Inter, Arial, sans-serif" font-size="15" letter-spacing="5" fill="#ff5a66">PROGETTO PRIVATO</text>
+  <text x="896" y="300" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" letter-spacing="4" fill="#8a8494">01 · DALLA CONOSCENZA</text>
+  <text x="896" y="322" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" letter-spacing="4" fill="#8a8494">ALLA DECISIONE</text>
+  <rect width="960" height="420" fill="url(#scan)"/>
 </svg>
