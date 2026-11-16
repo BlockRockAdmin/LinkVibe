@@ -11,12 +11,6 @@ function hostOf(url) {
   try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return ''; }
 }
 
-// profili aggiunti qui finché non sono nella tabella social_links (niente doppioni: vince la tabella)
-const EXTRA_LINKS = [
-  { title: 'Facebook', url: 'https://www.facebook.com/alessandro.lupi.1990', icon: 'fab fa-facebook' },
-  { title: 'MQL5', url: 'https://www.mql5.com/en/users/alessandro.lupi', icon: 'fas fa-chart-line' },
-];
-
 function renderLink(link, i) {
   const a = document.createElement('a');
   a.href = link.url;
@@ -42,10 +36,9 @@ async function loadLinks() {
       .order('order_number', { ascending: true });
     if (error) throw error;
 
-    const active = data.filter(l => l.is_active !== false);
-    const known = new Set(active.map(l => hostOf(l.url)));
-    const extra = EXTRA_LINKS.filter(l => !known.has(hostOf(l.url)));
-    box.replaceChildren(...[...active, ...extra].map(renderLink));
+    box.replaceChildren(
+      ...data.filter(l => l.is_active !== false).map(renderLink)
+    );
   } catch (err) {
     console.error('Errore nel caricamento dei link:', err);
     const msg = document.createElement('div');
