@@ -11,32 +11,25 @@ function hostOf(url) {
   try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return ''; }
 }
 
+// profili aggiunti qui finché non sono nella tabella social_links (niente doppioni: vince la tabella)
+const EXTRA_LINKS = [
+  { title: 'Facebook', url: 'https://www.facebook.com/alessandro.lupi.1990', icon: 'fab fa-facebook' },
+  { title: 'MQL5', url: 'https://www.mql5.com/en/users/alessandro.lupi', icon: 'fas fa-chart-line' },
+];
+
 function renderLink(link, i) {
   const a = document.createElement('a');
   a.href = link.url;
-  a.className = 'link-button';
+  a.className = 'social-icon';
   a.target = '_blank';
   a.rel = 'noopener noreferrer';
+  a.title = link.title;
+  a.setAttribute('aria-label', `${link.title} (${hostOf(link.url)})`);
   a.style.setProperty('--i', i);
-
-  const icon = document.createElement('span');
-  icon.className = 'link-icon';
   const iEl = document.createElement('i');
   iEl.className = link.icon || 'fas fa-link';
-  icon.appendChild(iEl);
-
-  const title = document.createElement('span');
-  title.className = 'link-title';
-  title.textContent = link.title;
-  const host = document.createElement('span');
-  host.className = 'link-host';
-  host.textContent = hostOf(link.url);
-  title.appendChild(host);
-
-  const arrow = document.createElement('i');
-  arrow.className = 'fas fa-arrow-up-right-from-square link-arrow';
-
-  a.append(icon, title, arrow);
+  iEl.setAttribute('aria-hidden', 'true');
+  a.appendChild(iEl);
   return a;
 }
 
@@ -49,9 +42,10 @@ async function loadLinks() {
       .order('order_number', { ascending: true });
     if (error) throw error;
 
-    box.replaceChildren(
-      ...data.filter(l => l.is_active !== false).map(renderLink)
-    );
+    const active = data.filter(l => l.is_active !== false);
+    const known = new Set(active.map(l => hostOf(l.url)));
+    const extra = EXTRA_LINKS.filter(l => !known.has(hostOf(l.url)));
+    box.replaceChildren(...[...active, ...extra].map(renderLink));
   } catch (err) {
     console.error('Errore nel caricamento dei link:', err);
     const msg = document.createElement('div');

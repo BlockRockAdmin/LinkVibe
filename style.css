@@ -323,3 +323,20 @@ h1 {
 .ap-note a { color: var(--a1); text-decoration: none; border-bottom: 1px dashed currentColor; }
 .vis-badge.showcase { color: #93c5fd; border: 1px solid rgba(78, 161, 255, 0.5); }
 .ap-cover img.fit-contain { object-fit: contain; background: #080809; }
+
+/* social: riga di icone */
+.socials { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 8px; }
+.social-icon, .social-skel {
+  width: 50px; height: 50px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--card); border: 1px solid var(--line);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+}
+.social-icon {
+  color: var(--text); text-decoration: none; font-size: 1.25rem;
+  transition: transform 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+  animation: rise 0.55s ease both; animation-delay: calc(0.15s + var(--i, 0) * 0.05s);
+}
+.social-icon:hover, .social-icon:focus-visible { transform: translateY(-3px); color: var(--a1); border-color: rgba(94, 234, 212, 0.45); box-shadow: 0 10px 30px -14px rgba(78, 161, 255, 0.6); outline: none; }
+.social-skel { opacity: 0.4; }
+.active-projects + .active-projects { margin-top: 36px; }
