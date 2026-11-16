@@ -340,3 +340,17 @@ h1 {
 .social-icon:hover, .social-icon:focus-visible { transform: translateY(-3px); color: var(--a1); border-color: rgba(94, 234, 212, 0.45); box-shadow: 0 10px 30px -14px rgba(78, 161, 255, 0.6); outline: none; }
 .social-skel { opacity: 0.4; }
 .active-projects + .active-projects { margin-top: 36px; }
+
+/* tag della presentazione = menu delle aree */
+html { scroll-behavior: smooth; }
+#sviluppo, #trading, #web { scroll-margin-top: 20px; }
+.area-nav a {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 0.86rem; font-weight: 500; color: var(--text); text-decoration: none;
+  padding: 8px 14px; border-radius: 999px;
+  background: var(--card); border: 1px solid var(--line);
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.area-nav a i { color: var(--a1); font-size: 0.8rem; }
+.area-nav a:hover, .area-nav a:focus-visible { transform: translateY(-2px); border-color: rgba(94, 234, 212, 0.45); color: var(--a1); outline: none; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
